@@ -21,5 +21,30 @@ namespace App_Evaluacion_ENE
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwdLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usrTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwdTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

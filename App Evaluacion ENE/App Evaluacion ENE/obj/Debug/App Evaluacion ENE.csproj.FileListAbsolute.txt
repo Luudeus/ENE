@@ -1,0 +1,11 @@
+C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\bin\Debug\App Evaluacion ENE.exe.config
+C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\bin\Debug\App Evaluacion ENE.exe
+C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\bin\Debug\App Evaluacion ENE.pdb
+C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\obj\Debug\App Evaluacion ENE.csproj.AssemblyReference.cache
+C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\obj\Debug\App_Evaluacion_ENE.Form2.resources
+C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\obj\Debug\App_Evaluacion_ENE.Properties.Resources.resources
+C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\obj\Debug\App Evaluacion ENE.csproj.GenerateResource.cache
+C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\obj\Debug\App Evaluacion ENE.csproj.CoreCompileInputs.cache
+C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\obj\Debug\App Evaluacion ENE.exe
+C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\obj\Debug\App Evaluacion ENE.pdb
+C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\obj\Debug\App_Evaluacion_ENE.Form1.resources
