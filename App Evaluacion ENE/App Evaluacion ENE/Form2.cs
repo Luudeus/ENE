@@ -55,7 +55,31 @@ namespace App_Evaluacion_ENE
 
         private void calcularBtn_Click(object sender, EventArgs e)
         {
+            // Intentamos analizar el valor de trabajadasTxt
+            if (int.TryParse(trabajadasTxt.Text, out int horasTrabajadas))
+            {
+                // La conversión fue exitosa, asignamos el valor
+                // Aquí puedes realizar los cálculos o acciones que desees
+            }
+            else
+            {
+                // La conversión falló, asignamos "ERROR!" y mostramos un mensaje de error
+                trabajadasTxt.Text = "ERROR!";
+                MessageBox.Show("El valor en 'Horas Trabajadas' no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
+            // Hacemos lo mismo para extraTxt
+            if (int.TryParse(extraTxt.Text, out int horasExtras))
+            {
+                // La conversión fue exitosa, asignamos el valor
+                // Aquí puedes realizar los cálculos o acciones que desees
+            }
+            else
+            {
+                // La conversión falló, asignamos "ERROR!" y mostramos un mensaje de error
+                extraTxt.Text = "ERROR!";
+                MessageBox.Show("El valor en 'Horas Extras' no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void limpiarBtn_Click(object sender, EventArgs e)
