@@ -57,7 +57,7 @@ namespace App_Evaluacion_ENE
             else
             {
                 // Manejo de errores si las conversiones fallaron
-                MessageBox.Show("Los valores en 'Horas Trabajadas' y/o 'Horas Extras' no son válidos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Los valores en 'Horas Trabajadas' y/u 'Horas Extras' no son válidos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
