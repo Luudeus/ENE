@@ -57,31 +57,21 @@ namespace App_Evaluacion_ENE
         {
             if (int.TryParse(trabajadasTxt.Text, out int horasTrabajadas) && int.TryParse(extraTxt.Text, out int horasExtras))
             {
-                // Calcular y mostrar el sueldo bruto
+                // Ambas conversiones fueron exitosas, ahora podemos usar las variables
                 double sueldoBruto = CalculadoraSueldo.CalcularSueldoBruto(horasTrabajadas, horasExtras);
-                brutoTxt.Text = sueldoBruto.ToString("C");
 
-                // Suponiendo que el tipo de AFP y Salud están seleccionados mediante contextMenuStrip1 y contextMenuStrip2
-                // Necesitaríamos más detalles sobre cómo se seleccionan para ajustar este código
-                string tipoAfp = "CUPRUM"; // Reemplazar con la lógica de selección de AFP
-                string tipoSalud = "FONASA"; // Reemplazar con la lógica de selección de Salud
-
-                // Calcular descuentos y bonos
-                double descuentoAfp = Descuentos.CalcularDescuentoAFP(tipoAfp, sueldoBruto);
-                double descuentoSalud = Descuentos.CalcularDescuentoSalud(tipoSalud, sueldoBruto);
-                double bonoMarzo = BonoMarzo.CalcularBono(sueldoBruto);
-
-                // Calcular y mostrar el sueldo líquido
-                double sueldoLiquido = sueldoBruto - descuentoAfp - descuentoSalud + bonoMarzo;
-                liquidoTxt.Text = sueldoLiquido.ToString("C");
+                // Aquí puedes mostrar el resultado en un TextBox o en donde lo necesites
+                // Por ejemplo, si tienes un TextBox llamado sueldoBrutoTxt:
+                brutoTxt.Text = sueldoBruto.ToString();
             }
             else
             {
                 // Manejo de errores si las conversiones fallaron
+                trabajadasTxt.Text = "ERROR!";
+                extraTxt.Text = "ERROR!";
                 MessageBox.Show("Los valores en 'Horas Trabajadas' y/o 'Horas Extras' no son válidos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
 
         private void limpiarBtn_Click(object sender, EventArgs e)
         {

@@ -8,20 +8,17 @@ namespace App_Evaluacion_ENE
 {
     public static class Program
     {
+        /// <summary>
+        /// Punto de entrada principal para la aplicación.
+        /// </summary>
         [STAThread]
         static void Main()
         {
-            // Si deseas ejecutar la aplicación de Windows Forms, descomenta las siguientes líneas:
-            // Application.EnableVisualStyles();
-            // Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new Form1());
-
-            // Si deseas ejecutar la aplicación de consola, descomenta las siguientes líneas:
-            // ExecuteConsoleApp();
-        }
-
-        static void ExecuteConsoleApp()
-        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
+            Application.Run(new Form2());
+            // Datos de entrada
             Console.Write("Indique la cantidad de horas trabajadas: ");
             int horasTrabajadas = int.Parse(Console.ReadLine());
 
@@ -34,6 +31,7 @@ namespace App_Evaluacion_ENE
             Console.Write("Introduce tu servicio de salud en mayúsculas: ");
             string tipoSalud = Console.ReadLine();
 
+            // Calcular y mostrar el sueldo líquido
             double sueldoBruto = CalculadoraSueldo.CalcularSueldoBruto(horasTrabajadas, horasExtras);
             double bonoMarzo = BonoMarzo.CalcularBono(sueldoBruto);
             double descuentoAfp = Descuentos.CalcularDescuentoAFP(tipoAfp, sueldoBruto);
@@ -44,4 +42,3 @@ namespace App_Evaluacion_ENE
         }
     }
 }
-
