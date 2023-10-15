@@ -25,7 +25,7 @@ namespace App_Evaluacion_ENE
 
             using (var db = new Database())
             {
-                db.OpenConnection();
+                db.OpenConnection(); // Abrir conexion con la db
 
                 // Preparar la consulta SQL
                 string query = "SELECT * FROM Administrador WHERE Usuario = @usuario AND Contrasena = @contrasena";
@@ -38,18 +38,19 @@ namespace App_Evaluacion_ENE
                 // Verificar si la consulta devolvió algún resultado
                 if (reader.Read())
                 {
-                    Form2 form2 = new Form2(); // Crea una instancia de tu segundo formulario
-                    this.Hide(); // Opcional: oculta el formulario actual
-                    form2.ShowDialog();
+                    Form2 form2 = new Form2(); // Crea una instancia de form2
+                    this.Hide(); // oculta el formulario actual
+                    form2.FormClosed += (s, args) => Application.Exit(); // Cierra la aplicación cuando form2 se cierra
+                    form2.ShowDialog(); // Muestra el form2
                 }
                 else
                 {
-                    // No se encontraron registros que coincidan: el usuario o la contraseña son incorrectos
+                    // Arrojar mensaje de error en caso de que el usuario o contrasena sean incorrectos
                     MessageBox.Show("El usuario o la contraseña son incorrecto(s)", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                reader.Close(); // No olvides cerrar el MySqlDataReader
-                db.CloseConnection();
+                reader.Close(); // Cerrar el reader
+                db.CloseConnection(); // Cerrar conexion con la db
             }
         }
     }
