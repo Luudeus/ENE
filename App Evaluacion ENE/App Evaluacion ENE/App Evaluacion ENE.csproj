@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BonoMarzo.cs" />
     <Compile Include="CalculadoraSueldo.cs" />
     <Compile Include="Descuentos.cs" />
     <Compile Include="Form1.cs">

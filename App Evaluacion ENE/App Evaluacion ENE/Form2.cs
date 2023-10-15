@@ -16,6 +16,8 @@ namespace App_Evaluacion_ENE
         public Form2()
         {
             InitializeComponent();
+            contextMenuStripAFP.ItemClicked += contextMenuStripAFP_ItemClicked;
+            contextMenuStripSalud.ItemClicked += contextMenuStripSalud_ItemClicked;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,14 +30,13 @@ namespace App_Evaluacion_ENE
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            contextMenuStripSalud.Show(saludBtn, new Point(0, calcularBtn.Height));
-        }
-
         private void button5_Click_1(object sender, EventArgs e)
         {
             contextMenuStripAFP.Show(afpBtn, new Point(0, calcularBtn.Height));
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            contextMenuStripSalud.Show(saludBtn, new Point(0, calcularBtn.Height));
         }
 
         private void trabajadasTxt_TextChanged(object sender, EventArgs e)
@@ -61,18 +62,16 @@ namespace App_Evaluacion_ENE
                 double sueldoBruto = CalculadoraSueldo.CalcularSueldoBruto(horasTrabajadas, horasExtras);
                 brutoTxt.Text = sueldoBruto.ToString("C");
 
-                // Suponiendo que el tipo de AFP y Salud están seleccionados mediante contextMenuStrip1 y contextMenuStrip2
-                // Necesitaríamos más detalles sobre cómo se seleccionan para ajustar este código
-                string tipoAfp = "CUPRUM"; // Reemplazar con la lógica de selección de AFP
-                string tipoSalud = "FONASA"; // Reemplazar con la lógica de selección de Salud
+                // Obtener el tipo de AFP y Salud de los textos de los botone
+                string tipoAfp = afpBtn.Text;
+                string tipoSalud = saludBtn.Text;
 
                 // Calcular descuentos y bonos
                 double descuentoAfp = Descuentos.CalcularDescuentoAFP(tipoAfp, sueldoBruto);
                 double descuentoSalud = Descuentos.CalcularDescuentoSalud(tipoSalud, sueldoBruto);
-                double bonoMarzo = BonoMarzo.CalcularBono(sueldoBruto);
 
                 // Calcular y mostrar el sueldo líquido
-                double sueldoLiquido = sueldoBruto - descuentoAfp - descuentoSalud + bonoMarzo;
+                double sueldoLiquido = sueldoBruto - descuentoAfp - descuentoSalud;
                 liquidoTxt.Text = sueldoLiquido.ToString("C");
             }
             else
@@ -101,5 +100,17 @@ namespace App_Evaluacion_ENE
         {
 
         }
+        private void contextMenuStripAFP_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            afpBtn.Text = e.ClickedItem.Text;
+            contextMenuStripAFP.Close();
+        }
+
+        private void contextMenuStripSalud_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            saludBtn.Text = e.ClickedItem.Text;
+            contextMenuStripSalud.Close();
+        }
+
     }
 }
