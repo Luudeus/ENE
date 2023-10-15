@@ -55,30 +55,21 @@ namespace App_Evaluacion_ENE
 
         private void calcularBtn_Click(object sender, EventArgs e)
         {
-            // Intentamos analizar el valor de trabajadasTxt
-            if (int.TryParse(trabajadasTxt.Text, out int horasTrabajadas))
+            if (int.TryParse(trabajadasTxt.Text, out int horasTrabajadas) && int.TryParse(extraTxt.Text, out int horasExtras))
             {
-                // La conversión fue exitosa, asignamos el valor
-                // Aquí puedes realizar los cálculos o acciones que desees
-            }
-            else
-            {
-                // La conversión falló, asignamos "ERROR!" y mostramos un mensaje de error
-                trabajadasTxt.Text = "ERROR!";
-                MessageBox.Show("El valor en 'Horas Trabajadas' no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                // Ambas conversiones fueron exitosas, ahora podemos usar las variables
+                double sueldoBruto = CalculadoraSueldo.CalcularSueldoBruto(horasTrabajadas, horasExtras);
 
-            // Hacemos lo mismo para extraTxt
-            if (int.TryParse(extraTxt.Text, out int horasExtras))
-            {
-                // La conversión fue exitosa, asignamos el valor
-                // Aquí puedes realizar los cálculos o acciones que desees
+                // Aquí puedes mostrar el resultado en un TextBox o en donde lo necesites
+                // Por ejemplo, si tienes un TextBox llamado sueldoBrutoTxt:
+                brutoTxt.Text = sueldoBruto.ToString();
             }
             else
             {
-                // La conversión falló, asignamos "ERROR!" y mostramos un mensaje de error
+                // Manejo de errores si las conversiones fallaron
+                trabajadasTxt.Text = "ERROR!";
                 extraTxt.Text = "ERROR!";
-                MessageBox.Show("El valor en 'Horas Extras' no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Los valores en 'Horas Trabajadas' y/o 'Horas Extras' no son válidos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
