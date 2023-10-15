@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.workedHrsLabel = new System.Windows.Forms.Label();
             this.extraHrsLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -38,6 +39,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.saludBtn = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.fONASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cONSALUDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mASVIDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bANMEDICAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.afpBtn = new System.Windows.Forms.Button();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cUPRUMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mODELOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cAPITALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pROVIDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // workedHrsLabel
@@ -142,11 +159,125 @@
             this.textBox2.Size = new System.Drawing.Size(175, 30);
             this.textBox2.TabIndex = 9;
             // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(556, 310);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(175, 30);
+            this.textBox3.TabIndex = 11;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(556, 228);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(175, 30);
+            this.textBox4.TabIndex = 10;
+            // 
+            // saludBtn
+            // 
+            this.saludBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saludBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saludBtn.Location = new System.Drawing.Point(556, 105);
+            this.saludBtn.Name = "saludBtn";
+            this.saludBtn.Size = new System.Drawing.Size(175, 32);
+            this.saludBtn.TabIndex = 12;
+            this.saludBtn.Text = "FONASA";
+            this.saludBtn.UseVisualStyleBackColor = true;
+            this.saludBtn.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fONASAToolStripMenuItem,
+            this.cONSALUDToolStripMenuItem,
+            this.mASVIDAToolStripMenuItem,
+            this.bANMEDICAToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(164, 100);
+            // 
+            // fONASAToolStripMenuItem
+            // 
+            this.fONASAToolStripMenuItem.Name = "fONASAToolStripMenuItem";
+            this.fONASAToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.fONASAToolStripMenuItem.Text = "FONASA";
+            // 
+            // cONSALUDToolStripMenuItem
+            // 
+            this.cONSALUDToolStripMenuItem.Name = "cONSALUDToolStripMenuItem";
+            this.cONSALUDToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.cONSALUDToolStripMenuItem.Text = "CONSALUD";
+            // 
+            // mASVIDAToolStripMenuItem
+            // 
+            this.mASVIDAToolStripMenuItem.Name = "mASVIDAToolStripMenuItem";
+            this.mASVIDAToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.mASVIDAToolStripMenuItem.Text = "MASVIDA";
+            // 
+            // bANMEDICAToolStripMenuItem
+            // 
+            this.bANMEDICAToolStripMenuItem.Name = "bANMEDICAToolStripMenuItem";
+            this.bANMEDICAToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.bANMEDICAToolStripMenuItem.Text = "BANMEDICA";
+            // 
+            // afpBtn
+            // 
+            this.afpBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.afpBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.afpBtn.Location = new System.Drawing.Point(556, 59);
+            this.afpBtn.Name = "afpBtn";
+            this.afpBtn.Size = new System.Drawing.Size(175, 32);
+            this.afpBtn.TabIndex = 13;
+            this.afpBtn.Text = "CUPRUM";
+            this.afpBtn.UseVisualStyleBackColor = true;
+            this.afpBtn.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cUPRUMToolStripMenuItem,
+            this.mODELOToolStripMenuItem,
+            this.cAPITALToolStripMenuItem,
+            this.pROVIDAToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip1";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(141, 100);
+            // 
+            // cUPRUMToolStripMenuItem
+            // 
+            this.cUPRUMToolStripMenuItem.Name = "cUPRUMToolStripMenuItem";
+            this.cUPRUMToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.cUPRUMToolStripMenuItem.Text = "CUPRUM";
+            // 
+            // mODELOToolStripMenuItem
+            // 
+            this.mODELOToolStripMenuItem.Name = "mODELOToolStripMenuItem";
+            this.mODELOToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.mODELOToolStripMenuItem.Text = "MODELO";
+            // 
+            // cAPITALToolStripMenuItem
+            // 
+            this.cAPITALToolStripMenuItem.Name = "cAPITALToolStripMenuItem";
+            this.cAPITALToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.cAPITALToolStripMenuItem.Text = "CAPITAL";
+            // 
+            // pROVIDAToolStripMenuItem
+            // 
+            this.pROVIDAToolStripMenuItem.Name = "pROVIDAToolStripMenuItem";
+            this.pROVIDAToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.pROVIDAToolStripMenuItem.Text = "PROVIDA";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.afpBtn);
+            this.Controls.Add(this.saludBtn);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -159,6 +290,8 @@
             this.Controls.Add(this.workedHrsLabel);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,5 +309,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button saludBtn;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fONASAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cONSALUDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mASVIDAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bANMEDICAToolStripMenuItem;
+        private System.Windows.Forms.Button afpBtn;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem cUPRUMToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mODELOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cAPITALToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pROVIDAToolStripMenuItem;
     }
 }

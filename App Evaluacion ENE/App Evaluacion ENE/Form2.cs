@@ -27,5 +27,15 @@ namespace App_Evaluacion_ENE
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(saludBtn, new Point(0, button1.Height));
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            contextMenuStrip2.Show(afpBtn, new Point(0, button1.Height));
+        }
     }
 }
