@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.workedHrsLabel = new System.Windows.Forms.Label();
             this.extraHrsLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.calcularBtn = new System.Windows.Forms.Button();
+            this.guardarBtn = new System.Windows.Forms.Button();
+            this.limpiarBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.trabajadasTxt = new System.Windows.Forms.TextBox();
+            this.extraTxt = new System.Windows.Forms.TextBox();
+            this.liquidoTxt = new System.Windows.Forms.TextBox();
+            this.brutoTxt = new System.Windows.Forms.TextBox();
             this.saludBtn = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fONASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,38 +78,41 @@
             this.extraHrsLabel.TabIndex = 1;
             this.extraHrsLabel.Text = "HORAS EXTRAS";
             // 
-            // button1
+            // calcularBtn
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(43, 185);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 35);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Calcular";
-            this.button1.UseVisualStyleBackColor = true;
+            this.calcularBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calcularBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calcularBtn.Location = new System.Drawing.Point(43, 185);
+            this.calcularBtn.Name = "calcularBtn";
+            this.calcularBtn.Size = new System.Drawing.Size(114, 35);
+            this.calcularBtn.TabIndex = 2;
+            this.calcularBtn.Text = "Calcular";
+            this.calcularBtn.UseVisualStyleBackColor = true;
+            this.calcularBtn.Click += new System.EventHandler(this.calcularBtn_Click);
             // 
-            // button2
+            // guardarBtn
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(43, 226);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 35);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.guardarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guardarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guardarBtn.Location = new System.Drawing.Point(43, 226);
+            this.guardarBtn.Name = "guardarBtn";
+            this.guardarBtn.Size = new System.Drawing.Size(114, 35);
+            this.guardarBtn.TabIndex = 3;
+            this.guardarBtn.Text = "Guardar";
+            this.guardarBtn.UseVisualStyleBackColor = true;
+            this.guardarBtn.Click += new System.EventHandler(this.guardarBtn_Click);
             // 
-            // button3
+            // limpiarBtn
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(43, 267);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 71);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Limpiar\r\nCambios\r\n";
-            this.button3.UseVisualStyleBackColor = true;
+            this.limpiarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.limpiarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.limpiarBtn.Location = new System.Drawing.Point(43, 267);
+            this.limpiarBtn.Name = "limpiarBtn";
+            this.limpiarBtn.Size = new System.Drawing.Size(114, 71);
+            this.limpiarBtn.TabIndex = 4;
+            this.limpiarBtn.Text = "Limpiar\r\nCampos";
+            this.limpiarBtn.UseVisualStyleBackColor = true;
+            this.limpiarBtn.Click += new System.EventHandler(this.limpiarBtn_Click);
             // 
             // button4
             // 
@@ -143,37 +146,41 @@
             this.label2.Text = "SUELDO BRUTO";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // trabajadasTxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(316, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 30);
-            this.textBox1.TabIndex = 8;
+            this.trabajadasTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trabajadasTxt.Location = new System.Drawing.Point(316, 61);
+            this.trabajadasTxt.Name = "trabajadasTxt";
+            this.trabajadasTxt.Size = new System.Drawing.Size(175, 30);
+            this.trabajadasTxt.TabIndex = 8;
+            this.trabajadasTxt.TextChanged += new System.EventHandler(this.trabajadasTxt_TextChanged);
             // 
-            // textBox2
+            // extraTxt
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(316, 107);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 30);
-            this.textBox2.TabIndex = 9;
+            this.extraTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.extraTxt.Location = new System.Drawing.Point(316, 107);
+            this.extraTxt.Name = "extraTxt";
+            this.extraTxt.Size = new System.Drawing.Size(175, 30);
+            this.extraTxt.TabIndex = 9;
+            this.extraTxt.TextChanged += new System.EventHandler(this.extraTxt_TextChanged);
             // 
-            // textBox3
+            // liquidoTxt
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(556, 310);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(175, 30);
-            this.textBox3.TabIndex = 11;
+            this.liquidoTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.liquidoTxt.Location = new System.Drawing.Point(556, 310);
+            this.liquidoTxt.Name = "liquidoTxt";
+            this.liquidoTxt.Size = new System.Drawing.Size(175, 30);
+            this.liquidoTxt.TabIndex = 11;
+            this.liquidoTxt.TextChanged += new System.EventHandler(this.liquidoTxt_TextChanged);
             // 
-            // textBox4
+            // brutoTxt
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(556, 228);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(175, 30);
-            this.textBox4.TabIndex = 10;
+            this.brutoTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brutoTxt.Location = new System.Drawing.Point(556, 228);
+            this.brutoTxt.Name = "brutoTxt";
+            this.brutoTxt.Size = new System.Drawing.Size(175, 30);
+            this.brutoTxt.TabIndex = 10;
+            this.brutoTxt.TextChanged += new System.EventHandler(this.brutoTxt_TextChanged);
             // 
             // saludBtn
             // 
@@ -276,16 +283,16 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.afpBtn);
             this.Controls.Add(this.saludBtn);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.liquidoTxt);
+            this.Controls.Add(this.brutoTxt);
+            this.Controls.Add(this.extraTxt);
+            this.Controls.Add(this.trabajadasTxt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.limpiarBtn);
+            this.Controls.Add(this.guardarBtn);
+            this.Controls.Add(this.calcularBtn);
             this.Controls.Add(this.extraHrsLabel);
             this.Controls.Add(this.workedHrsLabel);
             this.Name = "Form2";
@@ -301,16 +308,16 @@
 
         private System.Windows.Forms.Label workedHrsLabel;
         private System.Windows.Forms.Label extraHrsLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button calcularBtn;
+        private System.Windows.Forms.Button guardarBtn;
+        private System.Windows.Forms.Button limpiarBtn;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox trabajadasTxt;
+        private System.Windows.Forms.TextBox extraTxt;
+        private System.Windows.Forms.TextBox liquidoTxt;
+        private System.Windows.Forms.TextBox brutoTxt;
         private System.Windows.Forms.Button saludBtn;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fONASAToolStripMenuItem;

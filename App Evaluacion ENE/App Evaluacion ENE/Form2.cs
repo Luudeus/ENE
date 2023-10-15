@@ -30,12 +30,51 @@ namespace App_Evaluacion_ENE
 
         private void button5_Click(object sender, EventArgs e)
         {
-            contextMenuStrip1.Show(saludBtn, new Point(0, button1.Height));
+            contextMenuStrip1.Show(saludBtn, new Point(0, calcularBtn.Height));
         }
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            contextMenuStrip2.Show(afpBtn, new Point(0, button1.Height));
+            contextMenuStrip2.Show(afpBtn, new Point(0, calcularBtn.Height));
+        }
+
+        private void trabajadasTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void extraTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guardarBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void calcularBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void limpiarBtn_Click(object sender, EventArgs e)
+        {
+            // Borra el contenido de los TextBox
+            liquidoTxt.Text = string.Empty;
+            brutoTxt.Text = string.Empty;
+            extraTxt.Text = string.Empty;
+            trabajadasTxt.Text = string.Empty;
+        }
+
+        private void brutoTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void liquidoTxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
