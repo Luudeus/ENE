@@ -1,0 +1,1 @@
+Hacer que los botones de salud y AFP cambien su texto al presionar la opcion.
