@@ -35,8 +35,8 @@
             this.guardarBtn = new System.Windows.Forms.Button();
             this.limpiarBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.liquidoLabel = new System.Windows.Forms.Label();
+            this.brutoLabel = new System.Windows.Forms.Label();
             this.trabajadasTxt = new System.Windows.Forms.TextBox();
             this.extraTxt = new System.Windows.Forms.TextBox();
             this.liquidoTxt = new System.Windows.Forms.TextBox();
@@ -66,7 +66,6 @@
             this.workedHrsLabel.Size = new System.Drawing.Size(222, 25);
             this.workedHrsLabel.TabIndex = 0;
             this.workedHrsLabel.Text = "HORAS TRABAJADAS";
-            this.workedHrsLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // extraHrsLabel
             // 
@@ -125,26 +124,25 @@
             this.button4.Text = "Listar";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // liquidoLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(311, 313);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 25);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "SUELDO LIQUIDO";
+            this.liquidoLabel.AutoSize = true;
+            this.liquidoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.liquidoLabel.Location = new System.Drawing.Point(311, 313);
+            this.liquidoLabel.Name = "liquidoLabel";
+            this.liquidoLabel.Size = new System.Drawing.Size(180, 25);
+            this.liquidoLabel.TabIndex = 7;
+            this.liquidoLabel.Text = "SUELDO LIQUIDO";
             // 
-            // label2
+            // brutoLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(311, 231);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "SUELDO BRUTO";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.brutoLabel.AutoSize = true;
+            this.brutoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brutoLabel.Location = new System.Drawing.Point(311, 231);
+            this.brutoLabel.Name = "brutoLabel";
+            this.brutoLabel.Size = new System.Drawing.Size(168, 25);
+            this.brutoLabel.TabIndex = 6;
+            this.brutoLabel.Text = "SUELDO BRUTO";
             // 
             // trabajadasTxt
             // 
@@ -153,7 +151,6 @@
             this.trabajadasTxt.Name = "trabajadasTxt";
             this.trabajadasTxt.Size = new System.Drawing.Size(175, 30);
             this.trabajadasTxt.TabIndex = 8;
-            this.trabajadasTxt.TextChanged += new System.EventHandler(this.trabajadasTxt_TextChanged);
             // 
             // extraTxt
             // 
@@ -162,7 +159,6 @@
             this.extraTxt.Name = "extraTxt";
             this.extraTxt.Size = new System.Drawing.Size(175, 30);
             this.extraTxt.TabIndex = 9;
-            this.extraTxt.TextChanged += new System.EventHandler(this.extraTxt_TextChanged);
             // 
             // liquidoTxt
             // 
@@ -171,7 +167,6 @@
             this.liquidoTxt.Name = "liquidoTxt";
             this.liquidoTxt.Size = new System.Drawing.Size(175, 30);
             this.liquidoTxt.TabIndex = 11;
-            this.liquidoTxt.TextChanged += new System.EventHandler(this.liquidoTxt_TextChanged);
             // 
             // brutoTxt
             // 
@@ -180,7 +175,6 @@
             this.brutoTxt.Name = "brutoTxt";
             this.brutoTxt.Size = new System.Drawing.Size(175, 30);
             this.brutoTxt.TabIndex = 10;
-            this.brutoTxt.TextChanged += new System.EventHandler(this.brutoTxt_TextChanged);
             // 
             // saludBtn
             // 
@@ -250,30 +244,30 @@
             this.cAPITALToolStripMenuItem,
             this.pROVIDAToolStripMenuItem});
             this.contextMenuStripAFP.Name = "contextMenuStrip1";
-            this.contextMenuStripAFP.Size = new System.Drawing.Size(211, 128);
+            this.contextMenuStripAFP.Size = new System.Drawing.Size(141, 100);
             // 
             // cUPRUMToolStripMenuItem
             // 
             this.cUPRUMToolStripMenuItem.Name = "cUPRUMToolStripMenuItem";
-            this.cUPRUMToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.cUPRUMToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.cUPRUMToolStripMenuItem.Text = "CUPRUM";
             // 
             // mODELOToolStripMenuItem
             // 
             this.mODELOToolStripMenuItem.Name = "mODELOToolStripMenuItem";
-            this.mODELOToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.mODELOToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.mODELOToolStripMenuItem.Text = "MODELO";
             // 
             // cAPITALToolStripMenuItem
             // 
             this.cAPITALToolStripMenuItem.Name = "cAPITALToolStripMenuItem";
-            this.cAPITALToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.cAPITALToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.cAPITALToolStripMenuItem.Text = "CAPITAL";
             // 
             // pROVIDAToolStripMenuItem
             // 
             this.pROVIDAToolStripMenuItem.Name = "pROVIDAToolStripMenuItem";
-            this.pROVIDAToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.pROVIDAToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.pROVIDAToolStripMenuItem.Text = "PROVIDA";
             // 
             // Form2
@@ -287,8 +281,8 @@
             this.Controls.Add(this.brutoTxt);
             this.Controls.Add(this.extraTxt);
             this.Controls.Add(this.trabajadasTxt);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.liquidoLabel);
+            this.Controls.Add(this.brutoLabel);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.limpiarBtn);
             this.Controls.Add(this.guardarBtn);
@@ -312,8 +306,8 @@
         private System.Windows.Forms.Button guardarBtn;
         private System.Windows.Forms.Button limpiarBtn;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label liquidoLabel;
+        private System.Windows.Forms.Label brutoLabel;
         private System.Windows.Forms.TextBox trabajadasTxt;
         private System.Windows.Forms.TextBox extraTxt;
         private System.Windows.Forms.TextBox liquidoTxt;
