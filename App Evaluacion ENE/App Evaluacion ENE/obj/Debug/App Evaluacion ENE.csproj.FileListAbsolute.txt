@@ -41,3 +41,4 @@ C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App E
 C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\obj\Debug\App Evaluacion ENE.csproj.CopyComplete
+C:\Users\LACLL\OneDrive\Escritorio\git-repositories\ENE\App Evaluacion ENE\App Evaluacion ENE\obj\Debug\App_Evaluacion_ENE.Form3.resources

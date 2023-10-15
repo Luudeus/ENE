@@ -63,9 +63,9 @@
             this.workedHrsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workedHrsLabel.Location = new System.Drawing.Point(38, 64);
             this.workedHrsLabel.Name = "workedHrsLabel";
-            this.workedHrsLabel.Size = new System.Drawing.Size(222, 25);
+            this.workedHrsLabel.Size = new System.Drawing.Size(228, 25);
             this.workedHrsLabel.TabIndex = 0;
-            this.workedHrsLabel.Text = "HORAS TRABAJADAS";
+            this.workedHrsLabel.Text = "HORAS TRABAJADAS:";
             // 
             // extraHrsLabel
             // 
@@ -73,9 +73,9 @@
             this.extraHrsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.extraHrsLabel.Location = new System.Drawing.Point(38, 110);
             this.extraHrsLabel.Name = "extraHrsLabel";
-            this.extraHrsLabel.Size = new System.Drawing.Size(169, 25);
+            this.extraHrsLabel.Size = new System.Drawing.Size(175, 25);
             this.extraHrsLabel.TabIndex = 1;
-            this.extraHrsLabel.Text = "HORAS EXTRAS";
+            this.extraHrsLabel.Text = "HORAS EXTRAS:";
             // 
             // calcularBtn
             // 
@@ -130,9 +130,9 @@
             this.liquidoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.liquidoLabel.Location = new System.Drawing.Point(311, 313);
             this.liquidoLabel.Name = "liquidoLabel";
-            this.liquidoLabel.Size = new System.Drawing.Size(180, 25);
+            this.liquidoLabel.Size = new System.Drawing.Size(186, 25);
             this.liquidoLabel.TabIndex = 7;
-            this.liquidoLabel.Text = "SUELDO LIQUIDO";
+            this.liquidoLabel.Text = "SUELDO LIQUIDO:";
             // 
             // brutoLabel
             // 
@@ -140,9 +140,9 @@
             this.brutoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brutoLabel.Location = new System.Drawing.Point(311, 231);
             this.brutoLabel.Name = "brutoLabel";
-            this.brutoLabel.Size = new System.Drawing.Size(168, 25);
+            this.brutoLabel.Size = new System.Drawing.Size(174, 25);
             this.brutoLabel.TabIndex = 6;
-            this.brutoLabel.Text = "SUELDO BRUTO";
+            this.brutoLabel.Text = "SUELDO BRUTO:";
             // 
             // trabajadasTxt
             // 
@@ -180,13 +180,16 @@
             // 
             this.saludBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saludBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saludBtn.Image = global::App_Evaluacion_ENE.Properties.Resources._32195__1_;
+            this.saludBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.saludBtn.Location = new System.Drawing.Point(556, 105);
             this.saludBtn.Name = "saludBtn";
             this.saludBtn.Size = new System.Drawing.Size(175, 32);
             this.saludBtn.TabIndex = 12;
             this.saludBtn.Text = "FONASA";
+            this.saludBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.saludBtn.UseVisualStyleBackColor = true;
-            this.saludBtn.Click += new System.EventHandler(this.button5_Click);
+            this.saludBtn.Click += new System.EventHandler(this.saludBtn_Click);
             // 
             // contextMenuStripSalud
             // 
@@ -227,13 +230,16 @@
             // 
             this.afpBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.afpBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.afpBtn.Image = global::App_Evaluacion_ENE.Properties.Resources._32195__1_;
+            this.afpBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.afpBtn.Location = new System.Drawing.Point(556, 59);
             this.afpBtn.Name = "afpBtn";
             this.afpBtn.Size = new System.Drawing.Size(175, 32);
             this.afpBtn.TabIndex = 13;
             this.afpBtn.Text = "CUPRUM";
+            this.afpBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.afpBtn.UseVisualStyleBackColor = true;
-            this.afpBtn.Click += new System.EventHandler(this.button5_Click_1);
+            this.afpBtn.Click += new System.EventHandler(this.afpBtn_Click);
             // 
             // contextMenuStripAFP
             // 

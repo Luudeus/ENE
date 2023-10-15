@@ -21,15 +21,6 @@ namespace App_Evaluacion_ENE
             contextMenuStripSalud.ItemClicked += contextMenuStripSalud_ItemClicked;
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            contextMenuStripAFP.Show(afpBtn, new Point(0, calcularBtn.Height));
-        }
-        private void button5_Click(object sender, EventArgs e)
-        {
-            contextMenuStripSalud.Show(saludBtn, new Point(0, calcularBtn.Height));
-        }
-
         private void guardarBtn_Click(object sender, EventArgs e)
         {
 
@@ -83,5 +74,14 @@ namespace App_Evaluacion_ENE
             contextMenuStripSalud.Close();
         }
 
+        private void afpBtn_Click(object sender, EventArgs e)
+        {
+            contextMenuStripAFP.Show(afpBtn, new Point(0, calcularBtn.Height));
+        }
+
+        private void saludBtn_Click(object sender, EventArgs e)
+        {
+            contextMenuStripSalud.Show(saludBtn, new Point(0, calcularBtn.Height));
+        }
     }
 }
