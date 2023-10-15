@@ -30,12 +30,12 @@ namespace App_Evaluacion_ENE
 
         private void button5_Click(object sender, EventArgs e)
         {
-            contextMenuStrip1.Show(saludBtn, new Point(0, calcularBtn.Height));
+            contextMenuStripSalud.Show(saludBtn, new Point(0, calcularBtn.Height));
         }
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            contextMenuStrip2.Show(afpBtn, new Point(0, calcularBtn.Height));
+            contextMenuStripAFP.Show(afpBtn, new Point(0, calcularBtn.Height));
         }
 
         private void trabajadasTxt_TextChanged(object sender, EventArgs e)

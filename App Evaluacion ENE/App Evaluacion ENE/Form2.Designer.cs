@@ -42,19 +42,19 @@
             this.liquidoTxt = new System.Windows.Forms.TextBox();
             this.brutoTxt = new System.Windows.Forms.TextBox();
             this.saludBtn = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStripSalud = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fONASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cONSALUDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mASVIDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bANMEDICAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.afpBtn = new System.Windows.Forms.Button();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStripAFP = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cUPRUMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mODELOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cAPITALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pROVIDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1.SuspendLayout();
-            this.contextMenuStrip2.SuspendLayout();
+            this.contextMenuStripSalud.SuspendLayout();
+            this.contextMenuStripAFP.SuspendLayout();
             this.SuspendLayout();
             // 
             // workedHrsLabel
@@ -194,16 +194,16 @@
             this.saludBtn.UseVisualStyleBackColor = true;
             this.saludBtn.Click += new System.EventHandler(this.button5_Click);
             // 
-            // contextMenuStrip1
+            // contextMenuStripSalud
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextMenuStripSalud.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStripSalud.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fONASAToolStripMenuItem,
             this.cONSALUDToolStripMenuItem,
             this.mASVIDAToolStripMenuItem,
             this.bANMEDICAToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(164, 100);
+            this.contextMenuStripSalud.Name = "contextMenuStrip1";
+            this.contextMenuStripSalud.Size = new System.Drawing.Size(164, 100);
             // 
             // fONASAToolStripMenuItem
             // 
@@ -241,39 +241,39 @@
             this.afpBtn.UseVisualStyleBackColor = true;
             this.afpBtn.Click += new System.EventHandler(this.button5_Click_1);
             // 
-            // contextMenuStrip2
+            // contextMenuStripAFP
             // 
-            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextMenuStripAFP.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStripAFP.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cUPRUMToolStripMenuItem,
             this.mODELOToolStripMenuItem,
             this.cAPITALToolStripMenuItem,
             this.pROVIDAToolStripMenuItem});
-            this.contextMenuStrip2.Name = "contextMenuStrip1";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(141, 100);
+            this.contextMenuStripAFP.Name = "contextMenuStrip1";
+            this.contextMenuStripAFP.Size = new System.Drawing.Size(211, 128);
             // 
             // cUPRUMToolStripMenuItem
             // 
             this.cUPRUMToolStripMenuItem.Name = "cUPRUMToolStripMenuItem";
-            this.cUPRUMToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.cUPRUMToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.cUPRUMToolStripMenuItem.Text = "CUPRUM";
             // 
             // mODELOToolStripMenuItem
             // 
             this.mODELOToolStripMenuItem.Name = "mODELOToolStripMenuItem";
-            this.mODELOToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.mODELOToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.mODELOToolStripMenuItem.Text = "MODELO";
             // 
             // cAPITALToolStripMenuItem
             // 
             this.cAPITALToolStripMenuItem.Name = "cAPITALToolStripMenuItem";
-            this.cAPITALToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.cAPITALToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.cAPITALToolStripMenuItem.Text = "CAPITAL";
             // 
             // pROVIDAToolStripMenuItem
             // 
             this.pROVIDAToolStripMenuItem.Name = "pROVIDAToolStripMenuItem";
-            this.pROVIDAToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.pROVIDAToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.pROVIDAToolStripMenuItem.Text = "PROVIDA";
             // 
             // Form2
@@ -297,8 +297,8 @@
             this.Controls.Add(this.workedHrsLabel);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.contextMenuStrip1.ResumeLayout(false);
-            this.contextMenuStrip2.ResumeLayout(false);
+            this.contextMenuStripSalud.ResumeLayout(false);
+            this.contextMenuStripAFP.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,13 +319,13 @@
         private System.Windows.Forms.TextBox liquidoTxt;
         private System.Windows.Forms.TextBox brutoTxt;
         private System.Windows.Forms.Button saludBtn;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripSalud;
         private System.Windows.Forms.ToolStripMenuItem fONASAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cONSALUDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mASVIDAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bANMEDICAToolStripMenuItem;
         private System.Windows.Forms.Button afpBtn;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripAFP;
         private System.Windows.Forms.ToolStripMenuItem cUPRUMToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mODELOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cAPITALToolStripMenuItem;
