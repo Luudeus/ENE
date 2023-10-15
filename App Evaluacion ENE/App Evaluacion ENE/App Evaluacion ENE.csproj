@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculadoraSueldo.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="Descuentos.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
