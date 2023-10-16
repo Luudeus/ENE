@@ -30,9 +30,8 @@ namespace App_Evaluacion_ENE
         {
             if (int.TryParse(trabajadasTxt.Text, out int horasTrabajadas) && int.TryParse(extraTxt.Text, out int horasExtras))
             {
-                // Calcular y mostrar el sueldo bruto
+                // Calcular el sueldo bruto
                 double sueldoBruto = CalculadoraSueldo.CalcularSueldoBruto(horasTrabajadas, horasExtras);
-                brutoTxt.Text = sueldoBruto.ToString("C");
 
                 // Obtener el tipo de AFP y Salud de los textos de los botone
                 string tipoAfp = afpBtn.Text;
@@ -42,8 +41,10 @@ namespace App_Evaluacion_ENE
                 double descuentoAfp = Descuentos.CalcularDescuentoAFP(tipoAfp, sueldoBruto);
                 double descuentoSalud = Descuentos.CalcularDescuentoSalud(tipoSalud, sueldoBruto);
 
-                // Calcular y mostrar el sueldo líquido
+                // Calcular el sueldo líquido
                 double sueldoLiquido = sueldoBruto - descuentoAfp - descuentoSalud;
+                // Mostrar ambos sueldos
+                brutoTxt.Text = sueldoBruto.ToString("C");
                 liquidoTxt.Text = sueldoLiquido.ToString("C");
             }
             else
@@ -76,12 +77,12 @@ namespace App_Evaluacion_ENE
 
         private void afpBtn_Click(object sender, EventArgs e)
         {
-            contextMenuStripAFP.Show(afpBtn, new Point(0, calcularBtn.Height));
+            contextMenuStripAFP.Show(afpBtn, new Point(0, afpBtn.Height));
         }
 
         private void saludBtn_Click(object sender, EventArgs e)
         {
-            contextMenuStripSalud.Show(saludBtn, new Point(0, calcularBtn.Height));
+            contextMenuStripSalud.Show(saludBtn, new Point(0, saludBtn.Height));
         }
     }
 }

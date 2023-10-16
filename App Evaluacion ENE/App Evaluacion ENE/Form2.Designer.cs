@@ -60,28 +60,28 @@
             // workedHrsLabel
             // 
             this.workedHrsLabel.AutoSize = true;
-            this.workedHrsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.workedHrsLabel.Location = new System.Drawing.Point(38, 64);
+            this.workedHrsLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.workedHrsLabel.Location = new System.Drawing.Point(12, 9);
             this.workedHrsLabel.Name = "workedHrsLabel";
-            this.workedHrsLabel.Size = new System.Drawing.Size(228, 25);
+            this.workedHrsLabel.Size = new System.Drawing.Size(204, 28);
             this.workedHrsLabel.TabIndex = 0;
             this.workedHrsLabel.Text = "HORAS TRABAJADAS:";
             // 
             // extraHrsLabel
             // 
             this.extraHrsLabel.AutoSize = true;
-            this.extraHrsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.extraHrsLabel.Location = new System.Drawing.Point(38, 110);
+            this.extraHrsLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.extraHrsLabel.Location = new System.Drawing.Point(12, 55);
             this.extraHrsLabel.Name = "extraHrsLabel";
-            this.extraHrsLabel.Size = new System.Drawing.Size(175, 25);
+            this.extraHrsLabel.Size = new System.Drawing.Size(154, 28);
             this.extraHrsLabel.TabIndex = 1;
             this.extraHrsLabel.Text = "HORAS EXTRAS:";
             // 
             // calcularBtn
             // 
             this.calcularBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.calcularBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calcularBtn.Location = new System.Drawing.Point(43, 185);
+            this.calcularBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calcularBtn.Location = new System.Drawing.Point(17, 130);
             this.calcularBtn.Name = "calcularBtn";
             this.calcularBtn.Size = new System.Drawing.Size(114, 35);
             this.calcularBtn.TabIndex = 2;
@@ -92,10 +92,10 @@
             // guardarBtn
             // 
             this.guardarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guardarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guardarBtn.Location = new System.Drawing.Point(43, 226);
+            this.guardarBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guardarBtn.Location = new System.Drawing.Point(17, 171);
             this.guardarBtn.Name = "guardarBtn";
-            this.guardarBtn.Size = new System.Drawing.Size(114, 35);
+            this.guardarBtn.Size = new System.Drawing.Size(114, 36);
             this.guardarBtn.TabIndex = 3;
             this.guardarBtn.Text = "Guardar";
             this.guardarBtn.UseVisualStyleBackColor = true;
@@ -104,10 +104,10 @@
             // limpiarBtn
             // 
             this.limpiarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.limpiarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.limpiarBtn.Location = new System.Drawing.Point(43, 267);
+            this.limpiarBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.limpiarBtn.Location = new System.Drawing.Point(17, 212);
             this.limpiarBtn.Name = "limpiarBtn";
-            this.limpiarBtn.Size = new System.Drawing.Size(114, 71);
+            this.limpiarBtn.Size = new System.Drawing.Size(114, 74);
             this.limpiarBtn.TabIndex = 4;
             this.limpiarBtn.Text = "Limpiar\r\nCampos";
             this.limpiarBtn.UseVisualStyleBackColor = true;
@@ -116,10 +116,10 @@
             // button4
             // 
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(43, 344);
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(17, 289);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(114, 35);
+            this.button4.Size = new System.Drawing.Size(114, 37);
             this.button4.TabIndex = 5;
             this.button4.Text = "Listar";
             this.button4.UseVisualStyleBackColor = true;
@@ -127,64 +127,66 @@
             // liquidoLabel
             // 
             this.liquidoLabel.AutoSize = true;
-            this.liquidoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.liquidoLabel.Location = new System.Drawing.Point(311, 313);
+            this.liquidoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.liquidoLabel.Location = new System.Drawing.Point(285, 258);
             this.liquidoLabel.Name = "liquidoLabel";
-            this.liquidoLabel.Size = new System.Drawing.Size(186, 25);
+            this.liquidoLabel.Size = new System.Drawing.Size(171, 28);
             this.liquidoLabel.TabIndex = 7;
             this.liquidoLabel.Text = "SUELDO LIQUIDO:";
             // 
             // brutoLabel
             // 
             this.brutoLabel.AutoSize = true;
-            this.brutoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brutoLabel.Location = new System.Drawing.Point(311, 231);
+            this.brutoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brutoLabel.Location = new System.Drawing.Point(285, 176);
             this.brutoLabel.Name = "brutoLabel";
-            this.brutoLabel.Size = new System.Drawing.Size(174, 25);
+            this.brutoLabel.Size = new System.Drawing.Size(155, 28);
             this.brutoLabel.TabIndex = 6;
             this.brutoLabel.Text = "SUELDO BRUTO:";
             // 
             // trabajadasTxt
             // 
-            this.trabajadasTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trabajadasTxt.Location = new System.Drawing.Point(316, 61);
+            this.trabajadasTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trabajadasTxt.Location = new System.Drawing.Point(290, 6);
             this.trabajadasTxt.Name = "trabajadasTxt";
-            this.trabajadasTxt.Size = new System.Drawing.Size(175, 30);
+            this.trabajadasTxt.Size = new System.Drawing.Size(175, 34);
             this.trabajadasTxt.TabIndex = 8;
             // 
             // extraTxt
             // 
-            this.extraTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.extraTxt.Location = new System.Drawing.Point(316, 107);
+            this.extraTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.extraTxt.Location = new System.Drawing.Point(290, 52);
             this.extraTxt.Name = "extraTxt";
-            this.extraTxt.Size = new System.Drawing.Size(175, 30);
+            this.extraTxt.Size = new System.Drawing.Size(175, 34);
             this.extraTxt.TabIndex = 9;
             // 
             // liquidoTxt
             // 
-            this.liquidoTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.liquidoTxt.Location = new System.Drawing.Point(556, 310);
+            this.liquidoTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.liquidoTxt.Location = new System.Drawing.Point(530, 255);
             this.liquidoTxt.Name = "liquidoTxt";
-            this.liquidoTxt.Size = new System.Drawing.Size(175, 30);
+            this.liquidoTxt.ReadOnly = true;
+            this.liquidoTxt.Size = new System.Drawing.Size(175, 34);
             this.liquidoTxt.TabIndex = 11;
             // 
             // brutoTxt
             // 
-            this.brutoTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brutoTxt.Location = new System.Drawing.Point(556, 228);
+            this.brutoTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brutoTxt.Location = new System.Drawing.Point(530, 173);
             this.brutoTxt.Name = "brutoTxt";
-            this.brutoTxt.Size = new System.Drawing.Size(175, 30);
+            this.brutoTxt.ReadOnly = true;
+            this.brutoTxt.Size = new System.Drawing.Size(175, 34);
             this.brutoTxt.TabIndex = 10;
             // 
             // saludBtn
             // 
             this.saludBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saludBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saludBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saludBtn.Image = global::App_Evaluacion_ENE.Properties.Resources._32195__1_;
             this.saludBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.saludBtn.Location = new System.Drawing.Point(556, 105);
+            this.saludBtn.Location = new System.Drawing.Point(530, 50);
             this.saludBtn.Name = "saludBtn";
-            this.saludBtn.Size = new System.Drawing.Size(175, 32);
+            this.saludBtn.Size = new System.Drawing.Size(175, 36);
             this.saludBtn.TabIndex = 12;
             this.saludBtn.Text = "FONASA";
             this.saludBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,12 +231,12 @@
             // afpBtn
             // 
             this.afpBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.afpBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.afpBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.afpBtn.Image = global::App_Evaluacion_ENE.Properties.Resources._32195__1_;
             this.afpBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.afpBtn.Location = new System.Drawing.Point(556, 59);
+            this.afpBtn.Location = new System.Drawing.Point(530, 4);
             this.afpBtn.Name = "afpBtn";
-            this.afpBtn.Size = new System.Drawing.Size(175, 32);
+            this.afpBtn.Size = new System.Drawing.Size(175, 36);
             this.afpBtn.TabIndex = 13;
             this.afpBtn.Text = "CUPRUM";
             this.afpBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -280,7 +282,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(719, 338);
             this.Controls.Add(this.afpBtn);
             this.Controls.Add(this.saludBtn);
             this.Controls.Add(this.liquidoTxt);

@@ -40,37 +40,37 @@
             // 
             this.authLabel.AccessibleName = "";
             this.authLabel.AutoSize = true;
-            this.authLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.authLabel.Location = new System.Drawing.Point(169, 54);
+            this.authLabel.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.authLabel.Location = new System.Drawing.Point(160, 9);
             this.authLabel.Name = "authLabel";
-            this.authLabel.Size = new System.Drawing.Size(244, 38);
+            this.authLabel.Size = new System.Drawing.Size(245, 46);
             this.authLabel.TabIndex = 0;
             this.authLabel.Text = "Autentificación";
             // 
             // usrLabel
             // 
             this.usrLabel.AutoSize = true;
-            this.usrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usrLabel.Location = new System.Drawing.Point(21, 113);
+            this.usrLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usrLabel.Location = new System.Drawing.Point(12, 68);
             this.usrLabel.Name = "usrLabel";
-            this.usrLabel.Size = new System.Drawing.Size(93, 25);
+            this.usrLabel.Size = new System.Drawing.Size(83, 28);
             this.usrLabel.TabIndex = 1;
             this.usrLabel.Text = "Usuario:";
             // 
             // passwdLabel
             // 
             this.passwdLabel.AutoSize = true;
-            this.passwdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwdLabel.Location = new System.Drawing.Point(21, 152);
+            this.passwdLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwdLabel.Location = new System.Drawing.Point(12, 107);
             this.passwdLabel.Name = "passwdLabel";
-            this.passwdLabel.Size = new System.Drawing.Size(113, 25);
+            this.passwdLabel.Size = new System.Drawing.Size(97, 28);
             this.passwdLabel.TabIndex = 2;
             this.passwdLabel.Text = "Password:";
             // 
             // usrTxt
             // 
             this.usrTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usrTxt.Location = new System.Drawing.Point(165, 108);
+            this.usrTxt.Location = new System.Drawing.Point(156, 63);
             this.usrTxt.Name = "usrTxt";
             this.usrTxt.Size = new System.Drawing.Size(258, 30);
             this.usrTxt.TabIndex = 3;
@@ -78,8 +78,9 @@
             // passwdTxt
             // 
             this.passwdTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwdTxt.Location = new System.Drawing.Point(165, 150);
+            this.passwdTxt.Location = new System.Drawing.Point(156, 105);
             this.passwdTxt.Name = "passwdTxt";
+            this.passwdTxt.PasswordChar = '*';
             this.passwdTxt.Size = new System.Drawing.Size(258, 30);
             this.passwdTxt.TabIndex = 4;
             // 
@@ -87,8 +88,8 @@
             // 
             this.ingresarBtn.BackColor = System.Drawing.SystemColors.Control;
             this.ingresarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ingresarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ingresarBtn.Location = new System.Drawing.Point(165, 210);
+            this.ingresarBtn.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ingresarBtn.Location = new System.Drawing.Point(156, 165);
             this.ingresarBtn.Name = "ingresarBtn";
             this.ingresarBtn.Size = new System.Drawing.Size(258, 58);
             this.ingresarBtn.TabIndex = 5;
@@ -101,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(581, 343);
+            this.ClientSize = new System.Drawing.Size(585, 267);
             this.Controls.Add(this.ingresarBtn);
             this.Controls.Add(this.passwdTxt);
             this.Controls.Add(this.usrTxt);

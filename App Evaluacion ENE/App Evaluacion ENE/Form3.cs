@@ -19,6 +19,7 @@ namespace App_Evaluacion_ENE
             this.Load += Form3_Load;
             trabajadoresBtn.TextChanged += trabajadoresBtn_TextChanged;
             contextMenuStripWorker.ItemClicked += new ToolStripItemClickedEventHandler(contextMenuStripWorker_ItemClicked);
+            workerDgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
         }
 
@@ -80,6 +81,11 @@ namespace App_Evaluacion_ENE
             }
         }
 
+        private void trabajadoresBtn_TextChanged(object sender, EventArgs e)
+        {
+            // Cada vez que el texto cambia, actualizamos el DataGridView.
+            LlenarDataGridView(trabajadoresBtn.Text);
+        }
 
         private List<string> ObtenerRutsEmpleados()
         {
@@ -129,12 +135,6 @@ namespace App_Evaluacion_ENE
         }
 
 
-        private void trabajadoresBtn_TextChanged(object sender, EventArgs e)
-        {
-            // Cada vez que el texto cambia, actualizamos el DataGridView.
-            LlenarDataGridView(trabajadoresBtn.Text);
-        }
-
         private void trabajadoresBtn_Click(object sender, EventArgs e)
         {
             contextMenuStripWorker.Show(trabajadoresBtn, new Point(0, trabajadoresBtn.Height));
@@ -143,6 +143,77 @@ namespace App_Evaluacion_ENE
         {
             trabajadoresBtn.Text = e.ClickedItem.Text;
             contextMenuStripWorker.Close();
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            // Verificar si hay una fila seleccionada
+            if (workerDgv.SelectedRows.Count > 0)
+            {
+                // Obtener el índice de la primera fila seleccionada
+                // Esto asume selección única. Si se permite la selección múltiple, podrías iterar sobre todas las filas seleccionadas.
+                int selectedIndex = workerDgv.SelectedRows[0].Index;
+
+                // Obtener el Rut del empleado de la fila seleccionada, asumiendo que el Rut está en la primera columna (cambiar si es diferente)
+                string employeeRut = workerDgv.Rows[selectedIndex].Cells["Rut_Empleado"].Value.ToString(); // Asegúrate de que "Rut_Empleado" sea el nombre correcto de tu columna.
+
+                // Confirmación antes de eliminar
+                DialogResult dr = MessageBox.Show("¿Está seguro de que desea eliminar al empleado con Rut: " + employeeRut + "?", "Eliminar Empleado", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes)
+                {
+                    try
+                    {
+                        using (var db = new Database())
+                        {
+                            db.OpenConnection();
+
+                            // Preparar la consulta SQL para eliminar el registro
+                            string query = "DELETE FROM Empleados WHERE Rut_Empleado = @rut";
+                            MySqlCommand cmd = new MySqlCommand(query, db.GetConnection());
+                            cmd.Parameters.AddWithValue("@rut", employeeRut);
+
+                            // Ejecutar la consulta
+                            cmd.ExecuteNonQuery();
+
+                            // Cerrar la conexión
+                            db.CloseConnection();
+
+                            // Mostrar un mensaje de éxito
+                            MessageBox.Show("Empleado eliminado con éxito.", "Operación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Actualizar el DataGridView y las opciones del menú contextual para reflejar la eliminación
+                            LlenarDataGridView(); // Se llama al método para llenar el DataGridView.
+                            ActualizarOpcionesMenuContextual(); // Se llama al método para llenar el menú contextual.
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Mostrar mensaje en caso de error
+                        MessageBox.Show("Error al eliminar el empleado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                // Si no hay ninguna fila seleccionada, mostrar un mensaje
+                MessageBox.Show("Por favor, seleccione una fila para eliminar.", "Ninguna fila seleccionada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void ActualizarOpcionesMenuContextual()
+        {
+            // Limpiar las opciones existentes
+            contextMenuStripWorker.Items.Clear();
+
+            // Obtener las nuevas opciones basadas en tus datos (por ejemplo, claves primarias de la tabla Empleados)
+            List<string> rutsEmpleados = ObtenerRutsEmpleados();
+            // Agregar la palabra "TODOS" al inicio de la lista
+            rutsEmpleados.Insert(0, "TODOS");
+            // Agregar las nuevas opciones al menú contextual
+            foreach (var rut in rutsEmpleados)
+            {
+                contextMenuStripWorker.Items.Add(rut);
+            }
         }
 
     }
