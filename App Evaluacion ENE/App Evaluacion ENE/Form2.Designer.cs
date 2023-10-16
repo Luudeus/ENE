@@ -34,25 +34,24 @@
             this.calcularBtn = new System.Windows.Forms.Button();
             this.guardarBtn = new System.Windows.Forms.Button();
             this.limpiarBtn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.liquidoLabel = new System.Windows.Forms.Label();
             this.brutoLabel = new System.Windows.Forms.Label();
             this.trabajadasTxt = new System.Windows.Forms.TextBox();
             this.extraTxt = new System.Windows.Forms.TextBox();
             this.liquidoTxt = new System.Windows.Forms.TextBox();
             this.brutoTxt = new System.Windows.Forms.TextBox();
-            this.saludBtn = new System.Windows.Forms.Button();
             this.contextMenuStripSalud = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fONASAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cONSALUDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mASVIDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bANMEDICAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.afpBtn = new System.Windows.Forms.Button();
             this.contextMenuStripAFP = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cUPRUMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mODELOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cAPITALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pROVIDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.afpBtn = new System.Windows.Forms.Button();
+            this.saludBtn = new System.Windows.Forms.Button();
             this.contextMenuStripSalud.SuspendLayout();
             this.contextMenuStripAFP.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +80,7 @@
             // 
             this.calcularBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calcularBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calcularBtn.Location = new System.Drawing.Point(17, 130);
+            this.calcularBtn.Location = new System.Drawing.Point(17, 110);
             this.calcularBtn.Name = "calcularBtn";
             this.calcularBtn.Size = new System.Drawing.Size(114, 35);
             this.calcularBtn.TabIndex = 2;
@@ -93,7 +92,7 @@
             // 
             this.guardarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guardarBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guardarBtn.Location = new System.Drawing.Point(17, 171);
+            this.guardarBtn.Location = new System.Drawing.Point(17, 151);
             this.guardarBtn.Name = "guardarBtn";
             this.guardarBtn.Size = new System.Drawing.Size(114, 36);
             this.guardarBtn.TabIndex = 3;
@@ -105,7 +104,7 @@
             // 
             this.limpiarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.limpiarBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.limpiarBtn.Location = new System.Drawing.Point(17, 212);
+            this.limpiarBtn.Location = new System.Drawing.Point(17, 192);
             this.limpiarBtn.Name = "limpiarBtn";
             this.limpiarBtn.Size = new System.Drawing.Size(114, 74);
             this.limpiarBtn.TabIndex = 4;
@@ -113,22 +112,11 @@
             this.limpiarBtn.UseVisualStyleBackColor = true;
             this.limpiarBtn.Click += new System.EventHandler(this.limpiarBtn_Click);
             // 
-            // button4
-            // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(17, 289);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(114, 37);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Listar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // liquidoLabel
             // 
             this.liquidoLabel.AutoSize = true;
             this.liquidoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.liquidoLabel.Location = new System.Drawing.Point(285, 258);
+            this.liquidoLabel.Location = new System.Drawing.Point(285, 199);
             this.liquidoLabel.Name = "liquidoLabel";
             this.liquidoLabel.Size = new System.Drawing.Size(171, 28);
             this.liquidoLabel.TabIndex = 7;
@@ -138,7 +126,7 @@
             // 
             this.brutoLabel.AutoSize = true;
             this.brutoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brutoLabel.Location = new System.Drawing.Point(285, 176);
+            this.brutoLabel.Location = new System.Drawing.Point(285, 117);
             this.brutoLabel.Name = "brutoLabel";
             this.brutoLabel.Size = new System.Drawing.Size(155, 28);
             this.brutoLabel.TabIndex = 6;
@@ -163,7 +151,7 @@
             // liquidoTxt
             // 
             this.liquidoTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.liquidoTxt.Location = new System.Drawing.Point(530, 255);
+            this.liquidoTxt.Location = new System.Drawing.Point(530, 196);
             this.liquidoTxt.Name = "liquidoTxt";
             this.liquidoTxt.ReadOnly = true;
             this.liquidoTxt.Size = new System.Drawing.Size(175, 34);
@@ -172,26 +160,11 @@
             // brutoTxt
             // 
             this.brutoTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brutoTxt.Location = new System.Drawing.Point(530, 173);
+            this.brutoTxt.Location = new System.Drawing.Point(530, 114);
             this.brutoTxt.Name = "brutoTxt";
             this.brutoTxt.ReadOnly = true;
             this.brutoTxt.Size = new System.Drawing.Size(175, 34);
             this.brutoTxt.TabIndex = 10;
-            // 
-            // saludBtn
-            // 
-            this.saludBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saludBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saludBtn.Image = global::App_Evaluacion_ENE.Properties.Resources._32195__1_;
-            this.saludBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.saludBtn.Location = new System.Drawing.Point(530, 50);
-            this.saludBtn.Name = "saludBtn";
-            this.saludBtn.Size = new System.Drawing.Size(175, 36);
-            this.saludBtn.TabIndex = 12;
-            this.saludBtn.Text = "FONASA";
-            this.saludBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.saludBtn.UseVisualStyleBackColor = true;
-            this.saludBtn.Click += new System.EventHandler(this.saludBtn_Click);
             // 
             // contextMenuStripSalud
             // 
@@ -228,21 +201,6 @@
             this.bANMEDICAToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
             this.bANMEDICAToolStripMenuItem.Text = "BANMEDICA";
             // 
-            // afpBtn
-            // 
-            this.afpBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.afpBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.afpBtn.Image = global::App_Evaluacion_ENE.Properties.Resources._32195__1_;
-            this.afpBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.afpBtn.Location = new System.Drawing.Point(530, 4);
-            this.afpBtn.Name = "afpBtn";
-            this.afpBtn.Size = new System.Drawing.Size(175, 36);
-            this.afpBtn.TabIndex = 13;
-            this.afpBtn.Text = "CUPRUM";
-            this.afpBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.afpBtn.UseVisualStyleBackColor = true;
-            this.afpBtn.Click += new System.EventHandler(this.afpBtn_Click);
-            // 
             // contextMenuStripAFP
             // 
             this.contextMenuStripAFP.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -278,11 +236,41 @@
             this.pROVIDAToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.pROVIDAToolStripMenuItem.Text = "PROVIDA";
             // 
+            // afpBtn
+            // 
+            this.afpBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.afpBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.afpBtn.Image = global::App_Evaluacion_ENE.Properties.Resources._32195__1_;
+            this.afpBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.afpBtn.Location = new System.Drawing.Point(530, 4);
+            this.afpBtn.Name = "afpBtn";
+            this.afpBtn.Size = new System.Drawing.Size(175, 36);
+            this.afpBtn.TabIndex = 13;
+            this.afpBtn.Text = "CUPRUM";
+            this.afpBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.afpBtn.UseVisualStyleBackColor = true;
+            this.afpBtn.Click += new System.EventHandler(this.afpBtn_Click);
+            // 
+            // saludBtn
+            // 
+            this.saludBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saludBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saludBtn.Image = global::App_Evaluacion_ENE.Properties.Resources._32195__1_;
+            this.saludBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.saludBtn.Location = new System.Drawing.Point(530, 50);
+            this.saludBtn.Name = "saludBtn";
+            this.saludBtn.Size = new System.Drawing.Size(175, 36);
+            this.saludBtn.TabIndex = 12;
+            this.saludBtn.Text = "FONASA";
+            this.saludBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.saludBtn.UseVisualStyleBackColor = true;
+            this.saludBtn.Click += new System.EventHandler(this.saludBtn_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 338);
+            this.ClientSize = new System.Drawing.Size(719, 291);
             this.Controls.Add(this.afpBtn);
             this.Controls.Add(this.saludBtn);
             this.Controls.Add(this.liquidoTxt);
@@ -291,7 +279,6 @@
             this.Controls.Add(this.trabajadasTxt);
             this.Controls.Add(this.liquidoLabel);
             this.Controls.Add(this.brutoLabel);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.limpiarBtn);
             this.Controls.Add(this.guardarBtn);
             this.Controls.Add(this.calcularBtn);
@@ -313,7 +300,6 @@
         private System.Windows.Forms.Button calcularBtn;
         private System.Windows.Forms.Button guardarBtn;
         private System.Windows.Forms.Button limpiarBtn;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label liquidoLabel;
         private System.Windows.Forms.Label brutoLabel;
         private System.Windows.Forms.TextBox trabajadasTxt;

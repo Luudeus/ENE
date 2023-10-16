@@ -38,10 +38,10 @@ namespace App_Evaluacion_ENE
                 // Verificar si la consulta devolvió algún resultado
                 if (reader.Read())
                 {
-                    Form2 form2 = new Form2(); // Crea una instancia de form2
+                    Form3 form3 = new Form3(); // Crea una instancia de form3
                     this.Hide(); // oculta el formulario actual
-                    form2.FormClosed += (s, args) => Application.Exit(); // Cierra la aplicación cuando form2 se cierra
-                    form2.ShowDialog(); // Muestra el form2
+                    form3.FormClosed += (s, args) => Application.Exit(); // Cierra la aplicación cuando form3 se cierra
+                    form3.ShowDialog(); // Muestra el form3
                 }
                 else
                 {

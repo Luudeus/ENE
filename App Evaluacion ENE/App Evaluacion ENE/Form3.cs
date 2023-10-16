@@ -37,12 +37,12 @@ namespace App_Evaluacion_ENE
                     if (string.IsNullOrEmpty(clavePrimaria) || clavePrimaria == "TODOS")
                     {
                         // Si no hay filtro o el filtro es "TODOS", seleccionamos todos los empleados.
-                        query = "SELECT Rut_Empleado, Nombre, Direccion, Telefono, Sueldo_Liquido, Sueldo_Bruto FROM Empleados";
+                        query = "SELECT Rut_Empleado, Nombre, Direccion, Telefono, Sueldo_Bruto, Sueldo_Liquido  FROM Empleados";
                     }
                     else
                     {
                         // Si hay un filtro, seleccionamos los empleados que coincidan con la clave primaria.
-                        query = "SELECT Rut_Empleado, Nombre, Direccion, Telefono, Sueldo_Liquido, Sueldo_Bruto FROM Empleados WHERE Rut_Empleado = @rut";
+                        query = "SELECT Rut_Empleado, Nombre, Direccion, Telefono, Sueldo_Bruto, Sueldo_Liquido  FROM Empleados WHERE Rut_Empleado = @rut";
                         cmd.Parameters.AddWithValue("@rut", clavePrimaria); // Buscar empleados que coincidan con la clave primaria
                     }
 
@@ -158,7 +158,7 @@ namespace App_Evaluacion_ENE
                 string employeeRut = workerDgv.Rows[selectedIndex].Cells["Rut_Empleado"].Value.ToString(); // Asegúrate de que "Rut_Empleado" sea el nombre correcto de tu columna.
 
                 // Confirmación antes de eliminar
-                DialogResult dr = MessageBox.Show("¿Está seguro de que desea eliminar al empleado con Rut: " + employeeRut + "?", "Eliminar Empleado", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show("¿Está seguro de que desea eliminar al empleado con Rut: " + employeeRut + "?", "Eliminar Empleado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (dr == DialogResult.Yes)
                 {
@@ -216,5 +216,10 @@ namespace App_Evaluacion_ENE
             }
         }
 
+        private void modBtn_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4(); // Crea una instancia de form4
+            form4.ShowDialog(); // Muestra el form4
+        }
     }
 }

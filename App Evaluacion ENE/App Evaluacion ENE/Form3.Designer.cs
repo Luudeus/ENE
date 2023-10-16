@@ -119,6 +119,7 @@
             this.modBtn.TabIndex = 5;
             this.modBtn.Text = "Modificar";
             this.modBtn.UseVisualStyleBackColor = true;
+            this.modBtn.Click += new System.EventHandler(this.modBtn_Click);
             // 
             // Form3
             // 

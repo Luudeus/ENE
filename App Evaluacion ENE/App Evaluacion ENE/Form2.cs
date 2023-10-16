@@ -13,18 +13,24 @@ namespace App_Evaluacion_ENE
 {
     public partial class Form2 : Form
     {
-
-        public Form2()
+        private Form4 form4Instance;
+        public Form2(Form4 form4)
         {
             InitializeComponent();
             contextMenuStripAFP.ItemClicked += contextMenuStripAFP_ItemClicked;
             contextMenuStripSalud.ItemClicked += contextMenuStripSalud_ItemClicked;
+            form4Instance = form4;
+
         }
 
         private void guardarBtn_Click(object sender, EventArgs e)
         {
-
+            // No necesitas crear una nueva instancia de Form4. Usa la que pasaste al constructor.
+            form4Instance.BrutoText = brutoTxt.Text;
+            form4Instance.LiquidoText = liquidoTxt.Text;
         }
+
+
 
         private void calcularBtn_Click(object sender, EventArgs e)
         {
