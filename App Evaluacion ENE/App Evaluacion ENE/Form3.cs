@@ -307,6 +307,12 @@ namespace App_Evaluacion_ENE
 
             // Cambiar el nombre del botón de modificar
             this.modBtn.Text = "Cambiar Saldo";
+            //Cambiar el tamaño y posicion del form y sus contenidos
+            this.modBtn.Location = new Point(231, 80);
+            this.workerDgv.Size = new Size(662, 46);
+            this.workerDgv.Location = new Point(8, 15);
+            this.Size = new Size(694, 170);
+
         }
 
     }
