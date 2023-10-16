@@ -23,7 +23,7 @@ namespace App_Evaluacion_ENE
 
         }
 
-        private void LlenarDataGridView(string clavePrimaria = null)
+        internal void LlenarDataGridView(string clavePrimaria = null)
         {
             try
             {
@@ -151,11 +151,10 @@ namespace App_Evaluacion_ENE
             if (workerDgv.SelectedRows.Count > 0)
             {
                 // Obtener el índice de la primera fila seleccionada
-                // Esto asume selección única. Si se permite la selección múltiple, podrías iterar sobre todas las filas seleccionadas.
                 int selectedIndex = workerDgv.SelectedRows[0].Index;
 
                 // Obtener el Rut del empleado de la fila seleccionada, asumiendo que el Rut está en la primera columna (cambiar si es diferente)
-                string employeeRut = workerDgv.Rows[selectedIndex].Cells["Rut_Empleado"].Value.ToString(); // Asegúrate de que "Rut_Empleado" sea el nombre correcto de tu columna.
+                string employeeRut = workerDgv.Rows[selectedIndex].Cells["Rut_Empleado"].Value.ToString();
 
                 // Confirmación antes de eliminar
                 DialogResult dr = MessageBox.Show("¿Está seguro de que desea eliminar al empleado con Rut: " + employeeRut + "?", "Eliminar Empleado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -200,7 +199,7 @@ namespace App_Evaluacion_ENE
                 MessageBox.Show("Por favor, seleccione una fila para eliminar.", "Ninguna fila seleccionada", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void ActualizarOpcionesMenuContextual()
+        internal void ActualizarOpcionesMenuContextual()
         {
             // Limpiar las opciones existentes
             contextMenuStripWorker.Items.Clear();
@@ -218,8 +217,58 @@ namespace App_Evaluacion_ENE
 
         private void modBtn_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4(); // Crea una instancia de form4
-            form4.ShowDialog(); // Muestra el form4
+            // Verificar si hay una fila seleccionada
+            if (workerDgv.SelectedRows.Count > 0)
+            {
+                // Obtener el índice de la primera fila seleccionada
+                int selectedIndex = workerDgv.SelectedRows[0].Index;
+
+                // Obtener los datos del empleado de la fila seleccionada
+                string employeeRut = workerDgv.Rows[selectedIndex].Cells["Rut_Empleado"].Value?.ToString();
+
+                // Comprobar si la fila seleccionada tiene datos válidos
+                if (string.IsNullOrWhiteSpace(employeeRut))
+                {
+                    // Si el "Rut_Empleado" está vacío o es nulo, probablemente la fila no tiene datos válidos.
+                    MessageBox.Show("La fila seleccionada no contiene datos válidos.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Si el "Rut_Empleado" es válido, procedemos a recoger el resto de la información.
+                    string employeeNombre = workerDgv.Rows[selectedIndex].Cells["Nombre"].Value.ToString();
+                    string employeeDireccion = workerDgv.Rows[selectedIndex].Cells["Direccion"].Value.ToString();
+                    string employeeTelefono = workerDgv.Rows[selectedIndex].Cells["Telefono"].Value.ToString();
+                    string employeeBruto = workerDgv.Rows[selectedIndex].Cells["Sueldo_Bruto"].Value.ToString();
+                    string employeeLiquido = workerDgv.Rows[selectedIndex].Cells["Sueldo_Liquido"].Value.ToString();
+
+                    // Crear una instancia de Form4
+                    Form4 form4 = new Form4(this);  // Se crea una instancia de form4 pasando la instancia de form3
+
+                    // Establecer los valores de las TextBoxes en Form4
+                    form4.RutText = employeeRut;
+                    form4.NombreText = employeeNombre;
+                    form4.DireccionText = employeeDireccion;
+                    form4.TelefonoText = employeeTelefono;
+                    form4.BrutoText = employeeBruto;
+                    form4.LiquidoText = employeeLiquido;
+
+                    // Mostrar Form4
+                    form4.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una fila para modificar.", "Ninguna fila seleccionada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4(this); // Se pasa 'this' (Form3 actual) al constructor de Form4
+            form4.saveBtn.Text = "Ingresar Datos";
+            form4.ShowDialog(); // Mostrar el form4
         }
     }
 }

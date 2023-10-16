@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.trabajadoresLabel = new System.Windows.Forms.Label();
-            this.trabajadoresBtn = new System.Windows.Forms.Button();
             this.workerDgv = new System.Windows.Forms.DataGridView();
             this.contextMenuStripWorker = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tODOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.modBtn = new System.Windows.Forms.Button();
+            this.trabajadoresBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.workerDgv)).BeginInit();
             this.contextMenuStripWorker.SuspendLayout();
             this.SuspendLayout();
@@ -50,20 +50,6 @@
             this.trabajadoresLabel.Size = new System.Drawing.Size(137, 28);
             this.trabajadoresLabel.TabIndex = 0;
             this.trabajadoresLabel.Text = "TRABAJADOR:";
-            // 
-            // trabajadoresBtn
-            // 
-            this.trabajadoresBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trabajadoresBtn.Image = global::App_Evaluacion_ENE.Properties.Resources._32195__1_;
-            this.trabajadoresBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.trabajadoresBtn.Location = new System.Drawing.Point(155, 26);
-            this.trabajadoresBtn.Name = "trabajadoresBtn";
-            this.trabajadoresBtn.Size = new System.Drawing.Size(739, 44);
-            this.trabajadoresBtn.TabIndex = 1;
-            this.trabajadoresBtn.Text = "TODOS";
-            this.trabajadoresBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.trabajadoresBtn.UseVisualStyleBackColor = true;
-            this.trabajadoresBtn.Click += new System.EventHandler(this.trabajadoresBtn_Click);
             // 
             // workerDgv
             // 
@@ -109,6 +95,7 @@
             this.updateBtn.TabIndex = 4;
             this.updateBtn.Text = "Agregar";
             this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // modBtn
             // 
@@ -120,6 +107,20 @@
             this.modBtn.Text = "Modificar";
             this.modBtn.UseVisualStyleBackColor = true;
             this.modBtn.Click += new System.EventHandler(this.modBtn_Click);
+            // 
+            // trabajadoresBtn
+            // 
+            this.trabajadoresBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trabajadoresBtn.Image = global::App_Evaluacion_ENE.Properties.Resources._32195__1_;
+            this.trabajadoresBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.trabajadoresBtn.Location = new System.Drawing.Point(155, 26);
+            this.trabajadoresBtn.Name = "trabajadoresBtn";
+            this.trabajadoresBtn.Size = new System.Drawing.Size(739, 44);
+            this.trabajadoresBtn.TabIndex = 1;
+            this.trabajadoresBtn.Text = "TODOS";
+            this.trabajadoresBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.trabajadoresBtn.UseVisualStyleBackColor = true;
+            this.trabajadoresBtn.Click += new System.EventHandler(this.trabajadoresBtn_Click);
             // 
             // Form3
             // 

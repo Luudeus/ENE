@@ -49,7 +49,7 @@
             this.saldoBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saldoBtn.Location = new System.Drawing.Point(12, 250);
             this.saldoBtn.Name = "saldoBtn";
-            this.saldoBtn.Size = new System.Drawing.Size(437, 34);
+            this.saldoBtn.Size = new System.Drawing.Size(449, 44);
             this.saldoBtn.TabIndex = 0;
             this.saldoBtn.Text = "Calcular Saldo";
             this.saldoBtn.UseVisualStyleBackColor = true;
@@ -170,9 +170,9 @@
             // saveBtn
             // 
             this.saveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(12, 290);
+            this.saveBtn.Location = new System.Drawing.Point(12, 300);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(437, 34);
+            this.saveBtn.Size = new System.Drawing.Size(449, 44);
             this.saveBtn.TabIndex = 13;
             this.saveBtn.Text = "Guardar Cambios";
             this.saveBtn.UseVisualStyleBackColor = true;
@@ -182,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 342);
+            this.ClientSize = new System.Drawing.Size(487, 356);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -207,18 +207,18 @@
         #endregion
 
         private System.Windows.Forms.Button saldoBtn;
-        private System.Windows.Forms.TextBox rutTxt;
-        public System.Windows.Forms.TextBox sBrutoTxt;
-        public System.Windows.Forms.TextBox sLiquidoTxt;
-        private System.Windows.Forms.TextBox telefonoTxt;
-        private System.Windows.Forms.TextBox direccionTxt;
-        private System.Windows.Forms.TextBox nombreTxt;
+        public System.Windows.Forms.TextBox rutTxt;
+        public System.Windows.Forms.TextBox nombreTxt;
+        public System.Windows.Forms.TextBox direccionTxt;
+        public System.Windows.Forms.TextBox telefonoTxt;
+        private System.Windows.Forms.TextBox sBrutoTxt;
+        private System.Windows.Forms.TextBox sLiquidoTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button saveBtn;
+        public System.Windows.Forms.Button saveBtn;
     }
 }
