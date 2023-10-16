@@ -285,7 +285,7 @@
             this.Controls.Add(this.extraHrsLabel);
             this.Controls.Add(this.workedHrsLabel);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Calcular Sueldo";
             this.contextMenuStripSalud.ResumeLayout(false);
             this.contextMenuStripAFP.ResumeLayout(false);
             this.ResumeLayout(false);

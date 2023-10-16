@@ -36,12 +36,12 @@ namespace App_Evaluacion_ENE
 
                     if (string.IsNullOrEmpty(clavePrimaria) || clavePrimaria == "TODOS")
                     {
-                        // Si no hay filtro o el filtro es "TODOS", seleccionamos todos los empleados.
+                        // Si no hay filtro o el filtro es "TODOS", se seleccionan todos los empleados.
                         query = "SELECT Rut_Empleado, Nombre, Direccion, Telefono, Sueldo_Bruto, Sueldo_Liquido  FROM Empleados";
                     }
                     else
                     {
-                        // Si hay un filtro, seleccionamos los empleados que coincidan con la clave primaria.
+                        // Si hay un filtro, se seleccionan los empleados que coincidan con la clave primaria.
                         query = "SELECT Rut_Empleado, Nombre, Direccion, Telefono, Sueldo_Bruto, Sueldo_Liquido  FROM Empleados WHERE Rut_Empleado = @rut";
                         cmd.Parameters.AddWithValue("@rut", clavePrimaria); // Buscar empleados que coincidan con la clave primaria
                     }
@@ -121,10 +121,9 @@ namespace App_Evaluacion_ENE
             foreach (string rut in rutsEmpleados)
             {
                 ToolStripItem menuItem = new ToolStripMenuItem(rut);
-                menuItem.Click += (senderItem, eventArgs) => // Cambié 'sender' y 'e' a 'senderItem' y 'eventArgs'
+                menuItem.Click += (senderItem, eventArgs) =>
                 {
-                    // Aquí puedes manejar el evento click del elemento, si es necesario.
-                    // Por ejemplo, podrías querer cargar detalles del empleado cuando se haga clic en su RUT.
+
                 };
                 contextMenuStripWorker.Items.Add(menuItem);
             }

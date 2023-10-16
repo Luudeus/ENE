@@ -134,7 +134,7 @@
             this.Controls.Add(this.trabajadoresBtn);
             this.Controls.Add(this.trabajadoresLabel);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Lista de trabajadores";
             ((System.ComponentModel.ISupportInitialize)(this.workerDgv)).EndInit();
             this.contextMenuStripWorker.ResumeLayout(false);
             this.ResumeLayout(false);

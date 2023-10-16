@@ -74,7 +74,7 @@ namespace App_Evaluacion_ENE
                 // Mostrar un cuadro de diálogo de confirmación antes de proceder
                 DialogResult dr = MessageBox.Show("¿Está seguro de ingresar estos datos?", "Ingresar Datos", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                // Si el usuario confirma la acción...
+                // Si el usuario confirma la acción manejar un try except
                 if (dr == DialogResult.Yes)
                 {
                     try
@@ -138,7 +138,7 @@ namespace App_Evaluacion_ENE
                     // Mostrar un cuadro de diálogo de confirmación antes de proceder
                     DialogResult dr = MessageBox.Show("¿Está seguro de que desea guardar estos cambios?", "Guardar Cambios", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                    // Si el usuario confirma la acción...
+                    // Si el usuario confirma la acción manejar un try except
                     if (dr == DialogResult.Yes)
                     {
                         try

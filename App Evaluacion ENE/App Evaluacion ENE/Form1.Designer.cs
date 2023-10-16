@@ -43,7 +43,7 @@
             this.authLabel.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.authLabel.Location = new System.Drawing.Point(160, 9);
             this.authLabel.Name = "authLabel";
-            this.authLabel.Size = new System.Drawing.Size(245, 46);
+            this.authLabel.Size = new System.Drawing.Size(237, 45);
             this.authLabel.TabIndex = 0;
             this.authLabel.Text = "Autentificación";
             // 
@@ -110,7 +110,7 @@
             this.Controls.Add(this.usrLabel);
             this.Controls.Add(this.authLabel);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Iniciar Sesión";
             this.ResumeLayout(false);
             this.PerformLayout();
 

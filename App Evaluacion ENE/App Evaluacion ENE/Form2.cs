@@ -25,7 +25,7 @@ namespace App_Evaluacion_ENE
 
         private void guardarBtn_Click(object sender, EventArgs e)
         {
-            // No necesitas crear una nueva instancia de Form4. Usa la que pasaste al constructor.
+            // Definimos el texto de las casillas del form4 iguales a las casillas de sueldo bruto y liquido del form2
             form4Instance.BrutoText = brutoTxt.Text;
             form4Instance.LiquidoText = liquidoTxt.Text;
         }
