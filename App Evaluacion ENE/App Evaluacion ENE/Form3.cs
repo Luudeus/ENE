@@ -243,7 +243,9 @@ namespace App_Evaluacion_ENE
 
                     // Crear una instancia de Form4
                     Form4 form4 = new Form4(this);  // Se crea una instancia de form4 pasando la instancia de form3
-
+                    form4.Text = "Modificar Datos"; // Cambiar el nombre de la ventana
+                    // Se guarda la clave primaria en una variable para saber que tupla modificar
+                    form4.tuplamod = employeeRut;
                     // Establecer los valores de las TextBoxes en Form4
                     form4.RutText = employeeRut;
                     form4.NombreText = employeeNombre;
@@ -267,7 +269,8 @@ namespace App_Evaluacion_ENE
         private void updateBtn_Click(object sender, EventArgs e)
         {
             Form4 form4 = new Form4(this); // Se pasa 'this' (Form3 actual) al constructor de Form4
-            form4.saveBtn.Text = "Ingresar Datos";
+            form4.Text = "Ingresar Datos"; // Cambiar el nombre de la ventana
+            form4.saveBtn.Text = "Ingresar Datos"; // Cambiar el nombre del boton Guardar Cambios
             form4.ShowDialog(); // Mostrar el form4
         }
     }
