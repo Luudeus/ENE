@@ -13,13 +13,15 @@ namespace App_Evaluacion_ENE
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        private string rutEmpleadoIngresado; // Variable para almacenar el Rut del empleado
+        public Form3(string rutEmpleado = null)
         {
             InitializeComponent();
             this.Load += Form3_Load;
             trabajadoresBtn.TextChanged += trabajadoresBtn_TextChanged;
             contextMenuStripWorker.ItemClicked += new ToolStripItemClickedEventHandler(contextMenuStripWorker_ItemClicked);
             workerDgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.rutEmpleadoIngresado = rutEmpleado;
 
         }
 
@@ -114,23 +116,32 @@ namespace App_Evaluacion_ENE
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // Obtener los RUTs de los empleados de la base de datos
-            List<string> rutsEmpleados = ObtenerRutsEmpleados();
-
-            // Agregar un elemento al menú para cada RUT
-            foreach (string rut in rutsEmpleados)
+            // Si 'rutEmpleadoIngresado' no es null, significa que es un empleado y no un administrador.
+            if (!string.IsNullOrEmpty(rutEmpleadoIngresado))
             {
-                ToolStripItem menuItem = new ToolStripMenuItem(rut);
-                menuItem.Click += (senderItem, eventArgs) =>
-                {
+                LlenarDataGridView(rutEmpleadoIngresado); // Cargar solo el empleado específico
+            }
+            else
+            {
+                // Obtener los RUTs de los empleados de la base de datos
+                List<string> rutsEmpleados = ObtenerRutsEmpleados();
 
-                };
-                contextMenuStripWorker.Items.Add(menuItem);
+                // Agregar un elemento al menú para cada RUT
+                foreach (string rut in rutsEmpleados)
+                {
+                    ToolStripItem menuItem = new ToolStripMenuItem(rut);
+                    menuItem.Click += (senderItem, eventArgs) =>
+                    {
+
+                    };
+                    contextMenuStripWorker.Items.Add(menuItem);
+                }
+
+                // Cuando el formulario se carga, se llena el dgv asumiendo que 'trabajadoresBtn' tiene el texto "TODOS" al inicio.
+
+                LlenarDataGridView(trabajadoresBtn.Text);
             }
 
-            // Cuando el formulario se carga, se llena el dgv asumiendo que 'trabajadoresBtn' tiene el texto "TODOS" al inicio.
-
-            LlenarDataGridView(trabajadoresBtn.Text);
         }
 
 
@@ -252,7 +263,13 @@ namespace App_Evaluacion_ENE
                     form4.TelefonoText = employeeTelefono;
                     form4.BrutoText = employeeBruto;
                     form4.LiquidoText = employeeLiquido;
-
+                    if (modBtn.Text == "Cambiar Saldo")
+                    {
+                        form4.rutTxt.ReadOnly = true;
+                        form4.nombreTxt.ReadOnly = true;
+                        form4.direccionTxt.ReadOnly = true;
+                        form4.telefonoTxt.ReadOnly = true;
+                    }
                     // Mostrar Form4
                     form4.ShowDialog();
                 }
@@ -272,5 +289,25 @@ namespace App_Evaluacion_ENE
             form4.saveBtn.Text = "Ingresar Datos"; // Cambiar el nombre del boton Guardar Cambios
             form4.ShowDialog(); // Mostrar el form4
         }
+
+        public void OcultarBotonesAdministrativos()
+        {
+            // Cambiar texto del formulario
+            this.Text = "Perfil del trabajador";
+            // Ocultar etiqueta y botones de trabajadores, agregar y eliminar
+            this.trabajadoresLabel.Visible = false;
+            this.trabajadoresBtn.Visible = false;
+            this.updateBtn.Visible = false;
+            this.deleteBtn.Visible = false;
+
+            // Deshabilitar botones de trabajadores, agregar y eliminar
+            this.trabajadoresBtn.Enabled = false;
+            this.updateBtn.Enabled = false;
+            this.deleteBtn.Enabled = false;
+
+            // Cambiar el nombre del botón de modificar
+            this.modBtn.Text = "Cambiar Saldo";
+        }
+
     }
 }

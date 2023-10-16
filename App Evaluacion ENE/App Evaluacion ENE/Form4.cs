@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,6 +51,7 @@ namespace App_Evaluacion_ENE
         {
             set { sLiquidoTxt.Text = value; }
         }
+
         private void saldoBtn_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2(this); // Pasar esta instancia de Form4
@@ -87,13 +89,55 @@ namespace App_Evaluacion_ENE
                         {
                             db.OpenConnection();
 
-                            // Preparar la consulta SQL utilizando parámetros para prevenir la inyección de SQL
-                            string query = "INSERT INTO Empleados(Rut_Empleado, Nombre, Direccion, Telefono, Sueldo_Bruto, Sueldo_Liquido) VALUES (@Rut, @Nombre, @Direccion, @Telefono, @SueldoBruto, @SueldoLiquido)";
+                            // Preparar las consultas SQL utilizando parámetros para prevenir la inyección de SQL
+                            string query1 = "INSERT INTO Usuarios(Usuario, Contrasena) VALUES (@Rut, @Contraseña)";
+                            string query2 = "INSERT INTO Empleados(Rut_Empleado, Nombre, Direccion, Telefono, Sueldo_Bruto, Sueldo_Liquido, Usuario_Usuarios) VALUES (@Rut, @Nombre, @Direccion, @Telefono, @SueldoBruto, @SueldoLiquido, @Rut)";
 
-                            using (MySqlCommand cmd = new MySqlCommand(query, db.GetConnection()))
+                            using(MySqlCommand cmd = new MySqlCommand(query1, db.GetConnection()))
                             {
+                                string rutString = rutTxt.Text.Replace(".", "").Replace("-", "");
+                                int intRut;
+                                bool esValido = int.TryParse(rutString, out intRut);
+
+                                if (!esValido)
+                                {
+                                    // Si la conversión falla, mostrar mensaje de error salir del método.
+                                    MessageBox.Show("Debe ingresar un rut correctamente, los puntos y el guion son opcionales.", "Error en Rut Ingresado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    return;
+                                }
+                                string contrasena = string.Empty;
+                                int contador = 0;
+                                // Tomar los 4 primeros digitos del rut para crear una contraseña
+                                foreach (char digito in rutString)
+                                {
+                                    if (contador == 4)
+                                    {
+                                        break;
+                                    }
+                                    contrasena += digito;
+                                    contador++;
+                                }
                                 // Convertir los valores de los campos de texto y asignarlos a los parámetros
-                                cmd.Parameters.AddWithValue("@Rut", rutTxt.Text);
+                                cmd.Parameters.AddWithValue("@Contraseña", contrasena);
+                                cmd.Parameters.AddWithValue("@Rut", intRut);
+
+                                // Ejecutar la consulta
+                                cmd.ExecuteNonQuery();
+                            }
+                            using (MySqlCommand cmd = new MySqlCommand(query2, db.GetConnection()))
+                            {
+                                string rutString = rutTxt.Text.Replace(".","").Replace("-","");
+                                int intRut;
+                                bool esValido = int.TryParse(rutString, out intRut);
+
+                                if (!esValido)
+                                {
+                                    // Si la conversión falla, mostrar mensaje de error salir del método.
+                                    MessageBox.Show("Debe ingresar un rut correctamente, los puntos y el guion son opcionales.", "Error en Rut Ingresado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    return;
+                                }
+                                // Convertir los valores de los campos de texto y asignarlos a los parámetros
+                                cmd.Parameters.AddWithValue("@Rut", intRut);
                                 cmd.Parameters.AddWithValue("@Nombre", nombreTxt.Text);
                                 cmd.Parameters.AddWithValue("@Direccion", direccionTxt.Text);
                                 cmd.Parameters.AddWithValue("@Telefono", telefonoTxt.Text);
